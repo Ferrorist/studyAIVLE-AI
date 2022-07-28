@@ -12,7 +12,6 @@ def cycle(n):
             calc = number/10 + number%10
             number = int((number%10)*10 + calc%10)
             count += 1
-        print(f'number = {number}')
         if number == n: break
     return count
 
