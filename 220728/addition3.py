@@ -21,7 +21,7 @@ def solution(left, right):
             sum -= i
     return sum
 
-left = int(input())
-right = int(input())
-# left, right = map(int, input().split())
+left, right = map(int, input().split())
+# left = int(input())
+# right = int(input())
 print(solution(left, right))

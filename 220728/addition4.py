@@ -8,10 +8,12 @@
 # 모든 연산은 왼쪽에서부터 순서대로 이루어진다고 가정.
 
 data = input('숫자로 이루어진 문자열을 입력하세요. ')
-result = int(data[0])
+result = int(data[0]) # 문자열의 첫 숫자를 삽입.
 for i in range(1, len(data)):
     n = int(data[i])
-    if result <= 1 or n <= 1:
+    if result <= 1 or n <= 1: 
+        # 현재 값 혹은 다음 데이터 값이 1보다 작거나 같을 경우,
+        # 곱하는 것보다는 더하는 것이 더 큰 수로 계산하는 방법이라 판단.
         result += n
     else:
         result *= n
