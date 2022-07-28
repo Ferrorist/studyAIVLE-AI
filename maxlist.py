@@ -1,3 +1,5 @@
+# 미니 실습 1. ( + 개인 연습 - list)
+# count 개수의 정수의 최대값 구하기.
 count = int(input())
 if count <= 0:
     exit() # 정수 개수가 0 이하일 경우 실행하지 않음.
