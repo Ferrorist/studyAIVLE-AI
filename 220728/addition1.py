@@ -11,6 +11,5 @@ def gcd(a, b):
 def lcm(a, b):
     return int((a*b)/gcd(a,b))
 
-a = int(input())
-b = int(input())
+a, b = map(int, input().split())
 print(lcm(a,b))

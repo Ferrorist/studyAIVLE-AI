@@ -9,6 +9,5 @@ def gcd(a, b):
     else:
         return b
 
-a = int(input())
-b = int(input())
+a, b = map(int, input().split) # 50 10 방식으로 입력 받음.
 print(gcd(a,b))
