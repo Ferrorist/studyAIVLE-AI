@@ -12,9 +12,9 @@ def electricPay(n):
             cost += 125.9*100
             primary = 1600
             cost += 187.9*(n-200)
-    return primary+cost
+    price = primary+cost
+    price += price * 0.137 # 0.1(부가가치세 10%) + 0.037(전력산업기반기금 3.7%)
+    return int(price)
 
 electric = int(input('사용 전력량을 입력하세요.: '))
-price = electricPay(electric)
-price += price * 0.137
-print(int(price))
+print(electricPay(electric))
