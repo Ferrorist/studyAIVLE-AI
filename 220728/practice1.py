@@ -2,7 +2,7 @@ def electricPay(n):
     primary = 410
     cost = 0
     if n < 100:
-        cost = 60.7*n;
+        cost = 60.7*n
     else:
         cost += 60.7*100
         if n < 200:
