@@ -8,10 +8,10 @@
 # 모든 연산은 왼쪽에서부터 순서대로 이루어진다고 가정.
 
 data = input('숫자로 이루어진 문자열을 입력하세요. ')
-result = 0
-for i in range(len(data)):
+result = int(data[0])
+for i in range(1, len(data)):
     n = int(data[i])
-    if n <= 1:
+    if result <= 1 or n <= 1:
         result += n
     else:
         result *= n
