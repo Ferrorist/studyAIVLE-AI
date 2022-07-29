@@ -25,10 +25,6 @@ def binary_search(a, find, prev, next): # 이진 탐색.
         return -1
     return binary_search(a, find, prev, mid) if a[mid] > find else binary_search(a,find, mid, next)
     
-if __name__ == "__main__":
-    main()
-
-
 def input_list():
     LIST = []
     print('리스트에 들어갈 정수를 입력하세요.\n정수가 아닌 값을 입력하면 종료됩니다.: ', end='')
@@ -38,3 +34,6 @@ def input_list():
             LIST.append(x)
     except ValueError: # 정수가 아닌 값을 입력받을 경우 예외 처리.
         return LIST
+
+if __name__ == "__main__":
+    main()
