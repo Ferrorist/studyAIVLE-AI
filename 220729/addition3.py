@@ -1,4 +1,5 @@
 # 추가 실습 03
+# 추후 할 것 : 이진 탐색으로 풀어보기
 def solution(store, customer):
     answer = []
     for i in customer:
