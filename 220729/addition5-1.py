@@ -11,8 +11,9 @@ def solution(n, s): # n개의 자연수의 합이 s {1,1,1,1,1,1}
         num = a+1 if left > 0 else a
         LIST.append(num)
         left -= 1
+        # 두 자연수의 차이가 적을수록 곱하였을 때 큰 값이 나온다.
     LIST.sort()
     return LIST
     
 
-print(solution(10,45))
+# print(solution(10,45))
