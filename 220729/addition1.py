@@ -10,3 +10,5 @@ def solution(lottos, win_nums):
         if num in lottos: # win_nums가 lottos에 있을 경우 count++
             count += 1
     return rank[zero+count], rank[count]
+    # rank[zero+count] : 0이 모두 당첨 숫자 -> 등수가 가장 높음.
+    # rank[count] : 0이 모두 당첨 숫자가 아님 -> 등수가 가장 낮음.
