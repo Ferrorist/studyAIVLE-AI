@@ -11,14 +11,15 @@ def input_list():
     except ValueError: # 정수가 아닌 값을 입력받을 경우 예외 처리.
         return LIST
 
-def find_max(a):
-    LIST = a.copy()
-    LIST.sort()
-    return LIST[-1]
+# def find_max(a):
+#     LIST = a.copy()
+#     LIST.sort()
+#     return LIST[-1]
 
 a = input_list()
-a_max = find_max(a)
-for i in range(len(a)):
-    if a[i] == a_max:
-        print(f'최대값 {a_max}의 index : {i}')
-        break
+# a_max = find_max(a)
+# for i in range(len(a)):
+#     if a[i] == a_max:
+#         print(f'최대값 {a_max}의 index : {i}')
+#         break
+print(f'최대값 {max(a)}의 index : {a.index(max(a))}')
