@@ -20,5 +20,5 @@ a = input_list()
 a_max = find_max(a)
 for i in range(len(a)):
     if a[i] == a_max:
-        print(f'최대값의 index : {i}')
+        print(f'최대값 {a_max}의 index : {i}')
         break
