@@ -1,0 +1,41 @@
+    url_len : URL 길이
+    url_num_hyphens_dom : URL내 '-'(하이픈) 개수
+    url_path_len : URL의 경로 길이
+    url_domain_len : URL의 도메인 길이
+    url_hostname_len : URL의 hostname 길이
+    url_num_dots : URL내 '.'(닷) 개수
+    url_num_underscores : URL내 '_'(언더바) 개수
+    url_query_len : URL쿼리 길이
+    url_num_query_para : URL쿼리의 파라미터 개수
+    url_ip_present : URL내 IP표시 여부 (범주 -> 0, 1)
+    url_entropy : URL 복잡도
+    url_port : URL내 포트 표기 여부 (범주 -> 0, 1)
+    html_num_tags('iframe') : HTML내 'iframe' 태그 개수
+    html_num_tags('script') : HTML내 'script' 태그 개수
+    html_num_tags('embed') : HTML내 'embed' 태그 개수
+    html_num_tags('object') : HTML내 'object' 태그 개수
+    html_num_tags('div') : HTML내 'div' 태그 개수
+    html_num_tags('head') : HTML내 'head' 태그 개수
+    html_num_tags('body') : HTML내 'body' 태그 개수
+    html_num_tags('form') : HTML내 'form' 태그 개수
+    html_num_tags('a') : HTML내 'a' 태그 개수
+    Result_v1 : 악성사이트 여부 컬럼 ( 'malicious'는 악성사이트, 'benign'은 정상사이트 )
+
+
+================================
+
+    url_num_hyphens_dom : URL내 '-'(하이픈) 개수
+    url_path_len : URL의 경로 길이
+    url_domain_len : URL의 도메인 길이
+    url_hostname_len : URL의 hostname 길이
+    url_num_dots : URL내 '.'(닷) 개수
+    url_num_underscores : URL내 '_'(언더바) 개수
+    url_ip_present : URL내 IP표시 여부 (범주 -> 0, 1)
+    url_port : URL내 포트 표기 여부 (범주 -> 0, 1)
+    html_num_tags('script') : HTML내 'script' 태그 개수
+    html_num_tags('embed') : HTML내 'embed' 태그 개수
+    html_num_tags('object') : HTML내 'object' 태그 개수
+    html_num_tags('div') : HTML내 'div' 태그 개수
+    html_num_tags('form') : HTML내 'form' 태그 개수
+    html_num_tags('a') : HTML내 'a' 태그 개수
+    Result_v1 : 악성사이트 여부 컬럼 ( 'malicious'는 악성사이트, 'benign'은 정상사이트 )
