@@ -1,0 +1,5 @@
+from sklearn.experimental import enable_iterative_imputer
+from sklearn.impute import IterativeImputer
+imputer = IterativeImputer()
+new_columns = list(hap_data)
+new_columns.remove('datetime')

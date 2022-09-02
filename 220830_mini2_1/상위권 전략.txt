@@ -1,0 +1,109 @@
+놓친게 멀까 # 통계학을 더 배워야 할까
+전략들을 메모해보자.
+
+1. 박인호 (0.93977)
+단일 값을 갖는 의미없는 feature 제거
+p-value 5% 이하인 것들 확인
+
+P-value가 유의미한 값을 갖는 경우
+단일값을 갖는 feature를 제외한 모두를 포함
+XGB+GridSearch 
+RF+GridSearch
+
+결측치 처리 - KNNImputer?
+-----------
+
+2. 송원준 (0.94100)
+의미 있게 본 변수 : hostname_len, hyphens_dom
+하이픈 개수가 많을 수록 악성 사이트일 확률이 높다고 봄.
+
+chinese, embed, applet - 무의미하므로 제거.
+나머지 변수들은 모두 채용.
+KNNImputer로 결측치 처리
+
+--------------
+
+3. 옥수빈(0.94428)
+전처리 방안
+Unnamed:0, chinese, applet -> 무의미한 값을 확인 -> 제거
+'다중 머신러닝 알고리즘을 이용한 악성 URL 예측 시스템 설계 및 구현' - 멀티미디어학회논문지 -> 학술자료 활용
+
+모델 비교
+GridSearch
+DT, RF, XGB, Stacking을 사용
+
+--------------
+
+4. 이정연(0.93814)
+단변량 분석 - 대부분 변수들이 분포가 왼쪽으로 치우져짐
+entropy, head, body - 정규분포와 유사함
+
+chinese, applet -> 0 이외의 값을 가지지 않아 삭제할지 고민
+
+hostname = subdomain + domain 이라는 것을 알아냄.
+
+전처리
+Train Data -> 결측치 row 제거.
+Test Data -> KNN Imputer 사용하여 결측치 처리
+
+XGB, GridSearch CV + Stacking (LGBM? LGBMClassifier)
+
+---------------
+
+5. 안중찬(0.95247)
+p-value 0.05 이하면 target에 영향을 많이 미치고, 아니면 영향을 미치지 않는다.
+Config To Select
+
+Config to logistic
+
+IterativeImputer -> RandomForest를 여러번 반복할 수 있다.
+모든 경우의 수를 고려.
+불량 데이터에서만 보이는 옵션을 확인.
+bayes 옵티마이저 CatBoostClassifier
+BayesianOptimization
+VotingClassifier
+
+---------------
+
+6. 김진명(0.94756)
+변수의 형태 및 결측치 처리
+Test 결측치 처리법
+관계성을 찾음. -> url_len = url_domain_len + url_path_len
+url_domain_len 과 url_path_len은 유사함.
+
+3개 모두 NaN의 경우, IterativeImputer를 사용.
+범주형 예측에 성능이 좋은 CatBoostClassifier을 사용.
+
+---------------
+
+7. 주민철(0.93854)
+데이터 셋 변수 확인 및 도메인 지식 학습 시간을 가짐.
+결측치들을 확인 -> 결측치를 가진 2개 데이터 제거.
+
+단변량 분석 (수치형 변수)
+- columns 굉장히 치우쳐서 분포됨.
+
+이변량 분석
+- heatmap
+- Point Biserial 검정 진행.
+- 유도링크와 iframe의 태그가 관련이 있다 - feature engineering 진행.
+- KNN를 실행.
+- Scaler = RobustScaler를 사용 ( 다양한 스케일러를 사용해서 분석해봐야겠다. )
+VotingClassifier 구현
+결측값 : KNNImputer - 유클리드
+
+-----------------
+
+8. 정태민(0.94592)
+극단값 조정이 필요하다 생각.
+chinese applet -> 값들이 모두 0이므로 삭제.
+스케일링 -> 트레이닝 점수가 좋지 않아 사용하지 않음.
+중복값 처리 -> 300개 제거.
+
+Pycaret이라는 AUTOML 사용.
+
+결측치 - MICE 알고리즘으로 대체함.
+극단값 -> 최빈값으로 대체함. -> 결과가 좋지 않아 삭제.
+
+------------------
+

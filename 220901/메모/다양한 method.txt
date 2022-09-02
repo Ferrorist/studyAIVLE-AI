@@ -1,0 +1,8 @@
+# method 1 Naive Approach. y_t+1 = y_t
+# method 2 simple average
+# method 3 moving average yt = 1/p(sigma(y_1...+y_60)) 이동평균
+# method 4 simple exponential smoothing y_(t+1/t) = a_y+ alpha(1-a)*y(t-1)+alpha(1-alpha)**2*y(t-2).. 가중평균 - 지수평활법
+# 최근에 있던것에 가중평균을 만들어서 결측치 대치
+# method 5 
+# ARIMA/Holt-Winter Method 이해후 여기에 대해서 써보기
+exponential moving average interpolate
